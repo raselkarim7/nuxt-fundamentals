@@ -1,6 +1,7 @@
 # vue-school-nuxt-fundamentals
 
 > My lovely Nuxt.js project
+## https://vueschool.io/courses/nuxtjs-fundamentals
 
 ## Build Setup
 
