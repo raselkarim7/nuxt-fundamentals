@@ -1,10 +1,19 @@
 <template>
   <section class="container border">
-    <h2>pages/Index.vue</h2>
-    <div class="m-3 border">
-      <h1>vue-school-nuxt-fundamentals</h1>
-     <img src="https://vueschool.io/img/favicons/apple-touch-icon.png" alt="the logo">
-
+    <div>
+      <h1 >Vue-school-nuxt-fundamentals</h1>
+      <h2 >My Awesome Nuxt.js Project.</h2>
+      <div class="links p-2">
+        <nuxt-link
+          v-for="post in posts" 
+          :key="post.id"
+          :to="{name:'posts-id', params: {id: post.id}}"
+          class="button-grey"
+        >
+          <span class="border rounded p-2 mx-2"> {{ post.title }} </span>
+          
+        </nuxt-link>
+      </div>
     </div>
   </section>
 </template>
@@ -15,6 +24,11 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  computed: {
+    posts() {
+      return this.$store.state.posts.all;
+    }
   }
 }
 </script>

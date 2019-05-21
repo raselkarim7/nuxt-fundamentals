@@ -1,9 +1,9 @@
 <template>
     <nav class="nav">
         <div class="logo">
-            <a href="#" class="logo text-lg">
+            <nuxt-link :to="{name: 'index'}" class="logo text-lg">
                 Nuxt fundamentals
-            </a>
+            </nuxt-link>
             <span class="subheader">A vue school course</span>
         </div>
         <div class="logo">
