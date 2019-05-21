@@ -39,6 +39,17 @@ export default {
         relatedPosts() {
             return this.$store.state.posts.all.filter(post => post.id !== this.id)
         }
+    },
+    head() {
+        return {
+            title: this.post.title,
+            meta: [
+                {name: 'twitter:title', content: this.post.title},
+                {name: 'twitter:description', content: this.post.title},
+                {name: 'twitter:image', content: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/slice-of-pizza_1f355.png'},
+                {name: 'twitter:card', content: 'summary_large_image'},
+            ]
+        }
     }
 }
 </script>

@@ -29,6 +29,17 @@ export default {
     posts() {
       return this.$store.state.posts.all;
     }
+  },
+  head() {
+    return {
+      title: 'Home 🍕 Page',
+      meta: [
+          {name: 'twitter:title', content: 'Nuxt fundamentals by vue school.'},
+          {name: 'twitter:description', content: 'Nuxt + Vue School.'},
+          {name: 'twitter:image', content: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/slice-of-pizza_1f355.png'},
+          {name: 'twitter:card', content: 'summary_large_image'},
+      ]
+    }
   }
 }
 </script>
